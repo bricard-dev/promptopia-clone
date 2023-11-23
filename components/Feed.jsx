@@ -45,7 +45,12 @@ const Feed = () => {
     }, 500);
   };
 
-  const handleTagClick = (tagName) => {};
+  const handleTagClick = (tagName) => {
+    setSearchText(tagName);
+
+    const searchResult = filterPrompts(tagName);
+    setSearchResults(searchResult);
+  };
 
   useEffect(() => {
     const fetchPosts = async () => {
