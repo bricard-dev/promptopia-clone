@@ -36,4 +36,4 @@ Github [@bricard-dev](https://github.com/bricard-dev) · Email bastien.ricard-de
 - [NextAuth](https://next-auth.js.org/)
 - [MongoDB](https://www.mongodb.com/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [Shields.io](https://shields.io/)]
+- [Shields.io](https://shields.io/)

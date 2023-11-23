@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 import PromptCard from './PromptCard';
 
@@ -19,58 +19,57 @@ const PromptCardList = ({ data, handleTagClick }) => {
 };
 
 const Feed = () => {
-  const [posts, setPosts] = useState([]);
+  const [allPosts, setAllPosts] = useState([]);
 
+  // Search states
   const [searchText, setSearchText] = useState('');
-  const [searchResults, setSearchResults] = useState(null);
-  const searchTimeoutId = useRef(null);
+  const [searchTimeout, setSearchTimeout] = useState(null);
+  const [searchedResults, setSearchedResults] = useState([]);
+
+  const fetchPosts = async () => {
+    const response = await fetch('/api/prompt');
+    const data = await response.json();
+
+    setAllPosts(data);
+  };
+
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
   const filterPrompts = (searchtext) => {
-    const regex = new RegExp(searchtext, 'i');
-    return posts.filter(
-      (post) =>
-        regex.test(post.creator.username) ||
-        regex.test(post.prompt) ||
-        regex.test(post.tag)
+    const regex = new RegExp(searchtext, 'i'); // 'i' flag for case-insensitive search
+    return allPosts.filter(
+      (item) =>
+        regex.test(item.creator.username) ||
+        regex.test(item.tag) ||
+        regex.test(item.prompt)
     );
   };
 
   const handleSearchChange = (e) => {
-    clearTimeout(searchTimeoutId.current);
+    clearTimeout(searchTimeout);
     setSearchText(e.target.value);
 
-    searchTimeoutId.current = setTimeout(() => {
-      const searchResult = filterPrompts(e.target.value);
-      setSearchResults(searchResult);
-    }, 500);
+    // debounce method
+    setSearchTimeout(
+      setTimeout(() => {
+        const searchResult = filterPrompts(e.target.value);
+        setSearchedResults(searchResult);
+      }, 500)
+    );
   };
 
   const handleTagClick = (tagName) => {
     setSearchText(tagName);
 
     const searchResult = filterPrompts(tagName);
-    setSearchResults(searchResult);
+    setSearchedResults(searchResult);
   };
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const response = await fetch('/api/prompt');
-
-      if (response.ok) {
-        const data = await response.json();
-        setPosts(data);
-      }
-    };
-
-    fetchPosts();
-  }, []);
 
   return (
     <section className="feed">
-      <form
-        className="relative w-full flex-center"
-        onSubmit={(e) => e.preventDefault()}
-      >
+      <form className="relative w-full flex-center">
         <input
           type="text"
           placeholder="Search for a tag or a username"
@@ -81,10 +80,14 @@ const Feed = () => {
         />
       </form>
 
-      {searchResults ? (
-        <PromptCardList data={searchResults} handleTagClick={handleTagClick} />
+      {/* All Prompts */}
+      {searchText ? (
+        <PromptCardList
+          data={searchedResults}
+          handleTagClick={handleTagClick}
+        />
       ) : (
-        <PromptCardList data={posts} handleTagClick={handleTagClick} />
+        <PromptCardList data={allPosts} handleTagClick={handleTagClick} />
       )}
     </section>
   );
