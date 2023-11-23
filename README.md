@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Promptopia clone
 
-## Getting Started
+![GitHub Repo stars](https://img.shields.io/github/stars/bricard-dev/nextjs-todo-list)
+![GitHub forks](https://img.shields.io/github/forks/bricard-dev/nextjs-todo-list)
+![GitHub issues](https://img.shields.io/github/issues/bricard-dev/nextjs-todo-list)
 
-First, run the development server:
+AI prompt sharing application with Next.js, Next-auth, MongoDB and TailwindCSS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [General information](#general-information)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgments)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## General Information
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<!-- ![Demo](https://i.imgur.com/...) -->
+<!-- [Live demo](https://bricard-dev.github.io/nextjs-todo-list/) -->
 
-## Learn More
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=flat&logo=mongodb&logoColor=white) ![NextAuth.js](https://img.shields.io/badge/NextAuth.js-000000?style=flat&logo=next-auth&logoColor=white) ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwind-css&logoColor=white)
 
-To learn more about Next.js, take a look at the following resources:
+Developed a comprehensive web application using Next.js, focusing on in-depth exploration and hands-on practice with Next.js features, including API endpoints, NextAuth integration, and MongoDB database connectivity.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is based on an online course from [JavaScript Mastery](https://www.jsmastery.pro).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contact
 
-## Deploy on Vercel
+Github [@bricard-dev](https://github.com/bricard-dev) · Email bastien.ricard-dev@outlook.com
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Acknowledgments
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [MDN](https://developer.mozilla.org/en-US/)
+- [JavaScript Mastery](https://www.jsmastery.pro)
+- [Next.js](https://nextjs.org/)
+- [ReactJS](https://reactjs.org/)
+- [NextAuth](https://next-auth.js.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Shields.io](https://shields.io/)]
