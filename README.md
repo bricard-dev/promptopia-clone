@@ -1,8 +1,8 @@
 # Promptopia clone
 
-![GitHub Repo stars](https://img.shields.io/github/stars/bricard-dev/nextjs-todo-list)
-![GitHub forks](https://img.shields.io/github/forks/bricard-dev/nextjs-todo-list)
-![GitHub issues](https://img.shields.io/github/issues/bricard-dev/nextjs-todo-list)
+![GitHub Repo stars](https://img.shields.io/github/stars/bricard-dev/promptopia-clone)
+![GitHub forks](https://img.shields.io/github/forks/bricard-dev/promptopia-clone)
+![GitHub issues](https://img.shields.io/github/issues/bricard-dev/promptopia-clone)
 
 AI prompt sharing application with Next.js, Next-auth, MongoDB and TailwindCSS.
 
