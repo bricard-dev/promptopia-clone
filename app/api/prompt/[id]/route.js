@@ -1,8 +1,7 @@
 import Prompt from '@/models/prompt';
 import { connectToDatabase } from '@/utils/database';
-import { ObjectId } from 'mongodb';
 
-export const GET = async ({ params }) => {
+export const GET = async (request, { params }) => {
   try {
     await connectToDatabase();
 
@@ -40,7 +39,7 @@ export const PATCH = async (request, { params }) => {
   }
 };
 
-export const DELETE = async ({ params }) => {
+export const DELETE = async (request, { params }) => {
   try {
     await connectToDatabase();
 
